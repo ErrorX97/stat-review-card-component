@@ -22,10 +22,13 @@ body {
   flex-direction: column;
   height: 100vh;
 }
-
+main {
+  max-width: 80rem;
+  margin: 0 auto;
+}
 .card {
   display: grid;
-  grid-template-columns: 35rem auto;
+  grid-template-columns: 1fr 1fr;
   background-color: var(--Dark-desaturated-blue-cardBG);
   border-radius: 0.6rem;
   overflow: hidden;
@@ -67,7 +70,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   margin: auto;
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 .content-stats {
   margin-top: 2rem;
@@ -100,6 +103,40 @@ h1,
   color: var(--Slightly-statH);
   text-transform: uppercase;
   font-family: "Lexend Deca", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    text-align: center;
+    height: 100%;
+  }
+  .image {
+    order: -1;
+  }
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    padding: 12% 8%;
+    margin-top: 1rem;
+  }
+  .content-detail h1,
+  .content-detail p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+  .content-stat {
+    display: flex;
+    flex-direction: column;
+    align-item: center;
+    margin: 0;
+    padding: 0;
+  }
+  .content-stats {
+    padding: 0;
+  }
 }
 .attribution {
   font-size: 12px;
