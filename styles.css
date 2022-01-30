@@ -130,7 +130,7 @@ h1,
   .content-stat {
     display: flex;
     flex-direction: column;
-    align-item: center;
+    align-items: center;
     margin: 0;
     padding: 0;
   }
